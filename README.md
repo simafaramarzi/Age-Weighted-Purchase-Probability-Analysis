@@ -30,3 +30,7 @@ The project follows a rigorous, multi-step process to ensure a reliable and comp
 * Pandas: For flexible and powerful data manipulation and analysis.
 
 * Matplotlib: The primary library for creating professional-quality data visualizations
+
+  ## Key Finding
+- Age group 25-35 showed highest conditional purchase probability
+- Synthetic dataset of 30,000 samples used for controlled analysis
