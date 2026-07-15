@@ -1,36 +1,38 @@
-# Project Overview
-This project is a detailed data-driven analysis that explores the relationship between a person's age and their likelihood of making a purchase. It serves as a practical example of a complete data science workflow, from data generation and statistical analysis to visualization. The primary goal is to provide a clear, quantitative understanding of how age affects consumer behavior by calculating and comparing various conditional and joint probabilities.
+# Age-Weighted Purchase Probability Analysis
 
-# Key Features & Analytical Steps#
-The project follows a rigorous, multi-step process to ensure a reliable and comprehensive analysis:
+A probability theory exercise exploring how age affects the likelihood of a purchase, using a simulated dataset of 30,000 samples to calculate and compare conditional, joint, and marginal probabilities.
 
-**Data Generation:** The project begins by simulating a large, synthetic dataset of 30,000 samples. This allows for a controlled environment to study purchasing behavior.
+## What I Did
 
-**Probability Calculation:** For each age group, the project calculates three key probability metrics:
+1. **Data Generation**
+   - Simulated a synthetic dataset of 30,000 samples with age groups and purchase outcomes, to study purchasing behavior in a controlled setting
 
-* P(B) (Probability of Occurrence): The probability of a randomly selected person belonging to a specific age group.
+2. **Probability Calculations**
+   For each age group, calculated three core metrics:
+   - **P(B)** — probability of a randomly selected person belonging to that age group
+   - **P(A|B)** — conditional probability of a purchase, given age (the core metric for understanding age's effect)
+   - **P(A∩B)** — joint probability of being in that age group *and* making a purchase
 
-* P(A∣B) (Conditional Probability): The probability of a person making a purchase, given their specific age. This is the core metric for understanding the effect of age.
+3. **Two Analysis Approaches**
+   - **Weighted (simulation-based):** probabilities computed from a uniform age distribution, reflecting a random population
+   - **Unweighted (scenario-based):** probabilities computed from fixed, predefined values, representing a specific scenario
 
-* P(AcapB) (Joint Probability): The probability of a person being in a specific age group and making a purchase.
+4. **Visualization**
+   - Bar charts comparing probabilities across age groups for both approaches
 
-**Weighted vs. Unweighted Analysis:** The project performs two distinct types of analysis to showcase different modeling approaches:
+## How to Run
 
-* Weighted Analysis (Simulation-based): Based on a uniform age distribution, this method reflects how probabilities would behave in a random population.
+```bash
+pip install numpy pandas matplotlib
+jupyter notebook "Age-Weighted Purchase Probability Analysis.ipynb"
+```
 
-* Unweighted Analysis (Scenario-based): This method uses predefined probability values, demonstrating an analysis based on a fixed scenario or prior knowledge.
+No external dataset needed — data is generated within the notebook.
 
-**Data Visualization:** All results are presented through clear and informative bar charts created with Matplotlib. These visualizations make complex statistical findings easy to understand and interpret.
+## Tools
 
-# Technologies Used
-* Python: The foundational programming language for the entire analysis.
+Python · NumPy · Pandas · Matplotlib
 
-* NumPy: Used for high-performance numerical operations and efficient data generation.
+## Note
 
-* Pandas: For flexible and powerful data manipulation and analysis.
-
-* Matplotlib: The primary library for creating professional-quality data visualizations
-
-  ## Key Finding
-- Age group 25-35 showed highest conditional purchase probability
-- Synthetic dataset of 30,000 samples used for controlled analysis
+This is a probability/statistics exercise built on simulated data, not a real-world business dataset. It demonstrates conditional and joint probability calculations rather than predictive modeling.
